@@ -28,6 +28,7 @@ project/
 │   ├── feature_engineering.py          # Feature selection (Lasso + RF)
 │   ├── models.py                       # ML: anomaly detection + classifier
 │   └── dashboard.py                    # Streamlit interactive dashboard
+├── screenshots/                        # Dashboard screenshots and visualizations
 ├── requirements.txt                    # Python dependencies
 └── README.md
 ```
@@ -75,6 +76,20 @@ project/
 - **Model Predictions**: Failure probability distribution
 - **Filters**: By plant, product family, date range
 - **Export**: Download filtered CSV
+
+## Screenshots
+
+### Dashboard Overview
+![Dashboard Overview 1](screenshots/Screenshot%202025-12-01%20at%2011.57.07%20AM.png)
+
+### KPI Metrics
+![Dashboard Overview 2](screenshots/Screenshot%202025-12-01%20at%2011.57.19%20AM.png)
+
+### Feature Importance Analysis
+![Feature Importance](screenshots/Screenshot%202025-12-01%20at%2011.57.31%20AM.png)
+
+### Detailed Rankings
+![Detailed Rankings](screenshots/Screenshot%202025-12-01%20at%2011.57.40%20AM.png)
 
 ## Tech Stack
 - **Python 3.8**: Core language

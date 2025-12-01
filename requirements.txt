@@ -4,8 +4,8 @@ scikit-learn
 imbalanced-learn
 xgboost
 plotly
-streamlit
+streamlit>=1.28.0
 seaborn
 matplotlib
-shap
 joblib
+pyarrow>=7.0

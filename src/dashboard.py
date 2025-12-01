@@ -210,12 +210,12 @@ def main():
                     xaxis=dict(title="Sensor Name", tickangle=-45),
                     yaxis=dict(
                         title="Importance Score",
-                        titlefont=dict(color="#667eea"),
+                        title_font=dict(color="#667eea"),
                         tickfont=dict(color="#667eea")
                     ),
                     yaxis2=dict(
                         title="Cumulative %",
-                        titlefont=dict(color="red"),
+                        title_font=dict(color="red"),
                         tickfont=dict(color="red"),
                         overlaying="y",
                         side="right"

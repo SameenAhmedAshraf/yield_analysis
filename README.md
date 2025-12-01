@@ -80,16 +80,16 @@ project/
 ## Screenshots
 
 ### Dashboard Overview
-![Dashboard Overview 1](screenshots/Screenshot%202025-12-01%20at%2011.57.07%20AM.png)
+![Dashboard Overview 1](screenshots/01-screenshot.png)
 
 ### KPI Metrics
-![Dashboard Overview 2](screenshots/Screenshot%202025-12-01%20at%2011.57.19%20AM.png)
+![Dashboard Overview 2](screenshots/02-screenshot.png)
 
 ### Feature Importance Analysis
-![Feature Importance](screenshots/Screenshot%202025-12-01%20at%2011.57.31%20AM.png)
+![Feature Importance](screenshots/03-screenshot.png)
 
 ### Detailed Rankings
-![Detailed Rankings](screenshots/Screenshot%202025-12-01%20at%2011.57.40%20AM.png)
+![Detailed Rankings](screenshots/04-screenshot.png)
 
 ## Tech Stack
 - **Python 3.8**: Core language

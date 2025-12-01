@@ -82,14 +82,14 @@ project/
 ### Dashboard Overview
 ![Dashboard Overview 1](screenshots/01-screenshot.png)
 
-### KPI Metrics
-![Dashboard Overview 2](screenshots/02-screenshot.png)
+### Sensor Diagnostics
+![Sensor Diagnostics](screenshots/02-screenshot.png)
 
 ### Feature Importance Analysis
 ![Feature Importance](screenshots/03-screenshot.png)
 
-### Detailed Rankings
-![Detailed Rankings](screenshots/04-screenshot.png)
+### ML Model Predictions
+![ML Model Predictions](screenshots/04-screenshot.png)
 
 ## Tech Stack
 - **Python 3.8**: Core language

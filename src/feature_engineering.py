@@ -32,7 +32,7 @@ def scale_features(X, scaler_path=None):
 
 def select_features_lasso_rf(X, y, top_k=30):
     # Lasso selection
-    lasso = LassoCV(cv=5, n_jobs=-1)
+    lasso = LassoCV(cv=5, n_jobs=-1, max_iter=10000)
     lasso.fit(X, y)
     lasso_coefs = np.abs(lasso.coef_)
 

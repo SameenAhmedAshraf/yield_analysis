@@ -4,7 +4,7 @@ End-to-end data engineering and ML analytics for the UCI SECOM semiconductor dat
 
 ## Dataset
 - **UCI SECOM**: 1,567 wafer lots with 591 sensor measurements
-- **Realistic Yield**: 6.6% pass rate (93% defect rate = 934k DPM)
+- **Realistic Yield**: 93.4% pass rate (6.6% defect rate = 66,369 DPM)
 - **Augmented Context**: plant location, product family, shift, batch ID
 - **Business Value**: 1% yield improvement = $50M impact
 
@@ -46,7 +46,7 @@ project/
    Expected output:
    ```
    Saved processed CSV to data/processed/secom_processed.csv
-   Summary metrics: {'total': 1567, 'passes': 104, 'fails': 1463, 'yield_rate': 6.6%, 'dpm': 933631}
+   Summary metrics: {'total': 1567, 'passes': 1463, 'fails': 104, 'yield_rate': 93.4%, 'dpm': 66369}
    ```
 
 3. Train models:
@@ -62,8 +62,8 @@ project/
    Opens at `http://localhost:8501`
 
 ## Key Metrics
-- **Yield Rate**: (Pass / Total) × 100 = 6.6%
-- **DPM**: (Fails / Total) × 1,000,000 = 933,631
+- **Yield Rate**: (Pass / Total) × 100 = 93.4%
+- **DPM**: (Fails / Total) × 1,000,000 = 66,369
 - **FPY**: First Pass Yield (no rework assumed)
 - **ROI**: Yield_Improvement% × $50M
 

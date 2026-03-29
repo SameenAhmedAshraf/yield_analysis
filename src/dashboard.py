@@ -62,14 +62,14 @@ def main():
     
     st.sidebar.divider()
 
-    # Simple KPIs - use Pass/Fail column directly (UCI SECOM: -1=fail, 1=pass) from FILTERED data
+    # Simple KPIs - use Pass/Fail column directly (UCI SECOM: -1=pass, 1=fail) from FILTERED data
     total = len(df_f)
     if "Pass/Fail" in df_f.columns:
-        fails = (df_f["Pass/Fail"] == -1).sum()
-        passes = (df_f["Pass/Fail"] == 1).sum()
+        fails = (df_f["Pass/Fail"] == 1).sum()
+        passes = (df_f["Pass/Fail"] == -1).sum()
     elif "class" in df_f.columns:
-        fails = (df_f["class"] == -1).sum()
-        passes = (df_f["class"] == 1).sum()
+        fails = (df_f["class"] == 1).sum()
+        passes = (df_f["class"] == -1).sum()
     else:
         # Fallback
         fails = 0
@@ -94,7 +94,7 @@ def main():
     st.markdown("## Production Analysis")
     
     label_col = "Pass/Fail" if "Pass/Fail" in df_f.columns else ("class" if "class" in df_f.columns else df_f.columns[-1])
-    yield_df = df_f.groupby(pd.Grouper(key="date", freq="D")).apply(lambda g: pd.Series({"total": len(g), "fails": int((g[label_col] == -1).sum())})).reset_index()
+    yield_df = df_f.groupby(pd.Grouper(key="date", freq="D")).apply(lambda g: pd.Series({"total": len(g), "fails": int((g[label_col] == 1).sum())})).reset_index()
     if not yield_df.empty:
         yield_df["yield_rate"] = (yield_df["total"] - yield_df["fails"]) / yield_df["total"] * 100
         fig_y = px.line(yield_df, x="date", y="yield_rate", 

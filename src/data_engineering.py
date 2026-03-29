@@ -97,15 +97,14 @@ def create_summary_metrics(df):
     
     # Get the Pass/Fail column (should be last now)
     if "Pass/Fail" in df.columns:
-        # Real UCI SECOM data: -1 = fail, 1 = pass
+        # UCI SECOM data: -1 = pass, 1 = fail
         labels = df["Pass/Fail"].fillna(0).astype(int)
-        # Map: -1 (fail) → 1, 1 (pass) → 0 for counting
-        fails = (labels == -1).sum()
-        passes = (labels == 1).sum()
+        fails = (labels == 1).sum()
+        passes = (labels == -1).sum()
     elif "class" in df.columns:
         labels = df["class"].fillna(0).astype(int)
-        fails = (labels == -1).sum()
-        passes = (labels == 1).sum()
+        fails = (labels == 1).sum()
+        passes = (labels == -1).sum()
     elif "Status" in df.columns:
         labels = df["Status"].fillna(0).astype(int)
         fails = (labels == 1).sum()
@@ -113,8 +112,8 @@ def create_summary_metrics(df):
     else:
         # Fallback: assume last column is label
         labels = df[df.columns[-1]].fillna(0).astype(int)
-        fails = (labels < 0).sum()
-        passes = total - fails
+        fails = (labels == 1).sum()
+        passes = (labels == -1).sum()
 
     yield_rate = passes / total * 100
     dpm = fails / total * 1_000_000
